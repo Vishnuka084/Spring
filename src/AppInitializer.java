@@ -1,4 +1,5 @@
-import bean.SpringBean;
+import bean.BeanTwo;
+
 import config.AppConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -9,7 +10,7 @@ public class AppInitializer {
         ctx.register(AppConfig.class);
         ctx.refresh();
 
-        SpringBean bean = ctx.getBean(SpringBean.class);
+        BeanTwo bean = ctx.getBean(BeanTwo.class);
         System.out.println(bean);
 
 
