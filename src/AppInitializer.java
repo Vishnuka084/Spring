@@ -47,7 +47,7 @@ public class AppInitializer {
 */
 
         //SpringBeanThree -> springBeanThree
-        SpringBeanThree springBeanThree = (SpringBeanThree) ctx.getBean("springBeanThree");
+        SpringBeanThree springBeanThree = (SpringBeanThree) ctx.getBean("BeanThree");
         System.out.println(springBeanThree);
 
     }
