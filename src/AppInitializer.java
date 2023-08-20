@@ -54,8 +54,8 @@ public class AppInitializer {
         //System.out.println(springBeanThree);
 
 
-        MyConnection bean = ctx.getBean(MyConnection.class);
-        System.out.println(bean);
+        //MyConnection bean = ctx.getBean(MyConnection.class);
+        //System.out.println(bean);
 
 
         //MyConnection -> myConnection  //no
@@ -65,8 +65,18 @@ public class AppInitializer {
 
 
         //default
-        MyConnection myConnection = (MyConnection) ctx.getBean("connection");
-        System.out.println(myConnection);
+        //MyConnection myConnection = (MyConnection) ctx.getBean("connection");
+        //System.out.println(myConnection);
+
+        SpringBeanOne ref1 = ctx.getBean(SpringBeanOne.class);
+        SpringBeanOne ref2 = ctx.getBean(SpringBeanOne.class);
+        SpringBeanOne ref3 = ctx.getBean(SpringBeanOne.class);
+
+        System.out.println("-----------------------------------------------");
+
+        System.out.println(ref1);
+        System.out.println(ref2);
+        System.out.println(ref3);
 
     }
 }
