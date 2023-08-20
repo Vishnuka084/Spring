@@ -23,7 +23,7 @@ public class AppInitializer {
         ctx.register(AppConfig.class);
         ctx.refresh();
 
-/*        SpringBeanOne beanOne = ctx.getBean(SpringBeanOne.class);
+/*        SpringBeanOne beanOne = ctx.getBean(SpringBeanOne.class); // class type -->
         SpringBeanTwo beanTwo = ctx.getBean(SpringBeanTwo.class);
         System.out.println(beanOne);
         System.out.println(beanTwo);
@@ -32,8 +32,17 @@ public class AppInitializer {
         SpringBeanThree beanThree = ctx.getBean(SpringBeanThree.class);
         System.out.println(beanThree);*/
 
-        Object springBeanOne = ctx.getBean("springBeanOne");
+
+        //Bean Name request (Bean ID)
+        //SpringBeanOne -> springBeanOne (Bean ID)
+        SpringBeanOne springBeanOne = (SpringBeanOne) ctx.getBean("springBeanOne");
         System.out.println(springBeanOne);
+
+
+        //SpringBeanTwo -> springBeanTwo
+        SpringBeanTwo springBeanTwo = (SpringBeanTwo) ctx.getBean("springBeanTwo");
+        System.out.println(springBeanTwo);
+
 
     }
 }
