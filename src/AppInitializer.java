@@ -9,15 +9,16 @@ public class AppInitializer {
     public static void main(String[] args) {
 
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();
-        // Run Something just before jvm shutdown
+/*        // Run Something just before jvm shutdown
         Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
             @Override
             public void run() {
                 System.out.println("JVM is about to shout down");
                 ctx.close();
             }
-        }));
+        }));*/
 
+        ctx.registerShutdownHook();
 
         ctx.register(AppConfig.class);
         ctx.refresh();
@@ -30,10 +31,6 @@ public class AppInitializer {
 
         SpringBeanThree beanThree = ctx.getBean(SpringBeanThree.class);
         System.out.println(beanThree);
-
-
-
-
 
     }
 }
