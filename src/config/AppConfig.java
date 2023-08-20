@@ -20,7 +20,7 @@ public class AppConfig {
 
     //when we are not allowed to put the @Component annotation we can use this method to
     //introduce a spring bean to the Application Context
-    @Bean
+    @Bean("connection")
     public MyConnection getConnection(){
         return new MyConnection();
     }

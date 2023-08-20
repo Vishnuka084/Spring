@@ -49,13 +49,24 @@ public class AppInitializer {
 
 */
 
-    /*    //SpringBeanThree -> springBeanThree
-        SpringBeanThree springBeanThree = (SpringBeanThree) ctx.getBean("BeanThree");
-        System.out.println(springBeanThree);
-*/
+        //SpringBeanThree -> springBeanThree
+        //SpringBeanThree springBeanThree = (SpringBeanThree) ctx.getBean("BeanThree");
+        //System.out.println(springBeanThree);
+
 
         MyConnection bean = ctx.getBean(MyConnection.class);
         System.out.println(bean);
+
+
+        //MyConnection -> myConnection  //no
+        //@Bean - bean id - > bean method name
+        //MyConnection myConnection = (MyConnection) ctx.getBean("getConnection");
+        //System.out.println(myConnection);
+
+
+        //default
+        MyConnection myConnection = (MyConnection) ctx.getBean("connection");
+        System.out.println(myConnection);
 
     }
 }
