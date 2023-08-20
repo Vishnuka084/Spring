@@ -1,4 +1,5 @@
 
+import bean.MyConnection;
 import bean.SpringBeanOne;
 import bean.SpringBeanThree;
 import bean.SpringBeanTwo;
@@ -28,9 +29,11 @@ public class AppInitializer {
         System.out.println(beanOne);
         System.out.println(beanTwo);
 */
+/*
 
         SpringBeanThree beanThree = ctx.getBean(SpringBeanThree.class);
         System.out.println(beanThree);
+*/
 
 
 /*
@@ -46,9 +49,13 @@ public class AppInitializer {
 
 */
 
-        //SpringBeanThree -> springBeanThree
+    /*    //SpringBeanThree -> springBeanThree
         SpringBeanThree springBeanThree = (SpringBeanThree) ctx.getBean("BeanThree");
         System.out.println(springBeanThree);
+*/
+
+        MyConnection bean = ctx.getBean(MyConnection.class);
+        System.out.println(bean);
 
     }
 }
