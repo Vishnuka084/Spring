@@ -8,6 +8,14 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class AppInitializer {
     public static void main(String[] args) {
 
+        // Run Something just before jvm shutdown
+        Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("JVM is about to shout down");
+            }
+        }));
+
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();
         ctx.register(AppConfig.class);
         ctx.refresh();
