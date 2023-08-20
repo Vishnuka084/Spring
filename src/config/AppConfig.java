@@ -1,6 +1,7 @@
 package config;
 
 import bean.MyConnection;
+import bean.SpringBeanOne;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -9,7 +10,8 @@ import org.springframework.context.annotation.Configuration;
 //Spring Bean definitions walata source ekak
 //How to scan POJO  and enter to the Application context
 @Configuration
-@ComponentScan(basePackages = "config")
+@ComponentScan(basePackageClasses = SpringBeanOne.class)
+// @ComponentScan(basePackages = "bean")
 public class AppConfig {
 
     public AppConfig() {
