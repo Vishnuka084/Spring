@@ -9,11 +9,11 @@ import org.springframework.context.annotation.Configuration;
 //Spring Bean definitions walata source ekak
 //How to scan POJO  and enter to the Application context
 @Configuration
-@ComponentScan(basePackages = "bean")
+@ComponentScan(basePackages = "config")
 public class AppConfig {
 
     public AppConfig() {
-        System.out.println("Spring Bean Created Object");
+        System.out.println("AppConfig");
     }
 
     //when we are not allowed to put the @Component annotation we can use this method to
